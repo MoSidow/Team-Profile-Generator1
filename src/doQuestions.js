@@ -20,7 +20,7 @@ const DisplayManagerQuestions = () => {
     .prompt(Questions.managerQuestions)
     .then((response) => {
 
-        const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
+        const manager = new Manager(response.id, response.name, response.email, response.officeNumber);
 
         managers.push(manager);
 
@@ -34,7 +34,7 @@ const DisplayInternQuestions = () => {
     .prompt(Questions.internQuestions)
     .then((response) => {
 
-        const intern = new Intern(response.name, response.id, response.email, response.school);
+        const intern = new Intern(response.id, response.name, response.email, response.school);
 
         interns.push(intern);
 
@@ -48,7 +48,7 @@ const DisplayEngineerQuestions = () => {
     .prompt(Questions.engineerQuestions)
     .then((response) => {
 
-        const engineer = new Engineer(response.name, response.id, response.email, response.github);
+        const engineer = new Engineer(response.id, response.name, response.email, response.github);
 
         engineers.push(engineer);
 

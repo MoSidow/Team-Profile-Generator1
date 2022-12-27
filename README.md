@@ -41,7 +41,9 @@ THEN I exit the application, and the HTML is generated
 
 ## Link to walkthrough video
 
+https://drive.google.com/file/d/1uVcRr_YarPsEXRVNy8-rOzO4OnszaRCy/view
 
+## Sample HTML file generated using this application
 
-## Link to sample README.md file generated using this application.
+Located in dist folder, open in browser to see webpage.
 
