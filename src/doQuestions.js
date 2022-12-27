@@ -1,9 +1,12 @@
+// require inquirer
 const inquirer = require('inquirer');
 
+// require Engineer, Intern and Manager
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
 
+// Empty Array
 const managers = [];
 const interns = [];
 const engineers = [];
@@ -11,7 +14,7 @@ const engineers = [];
 const Questions = require('./questions')
 const BuildHtmlPage = require('./PageBuilder');
 
-
+// Prompt ManagerQuestions to user
 const DisplayManagerQuestions = () => {
     inquirer
     .prompt(Questions.managerQuestions)
@@ -25,6 +28,7 @@ const DisplayManagerQuestions = () => {
     })
 }
 
+// Prompt InternQuestions to user
 const DisplayInternQuestions = () => {
     inquirer
     .prompt(Questions.internQuestions)
@@ -38,6 +42,7 @@ const DisplayInternQuestions = () => {
     })
 }
 
+// Prompt EngineerQuestions to user
 const DisplayEngineerQuestions = () => {
     inquirer
     .prompt(Questions.engineerQuestions)
@@ -51,10 +56,12 @@ const DisplayEngineerQuestions = () => {
     })
 }
 
+// Prompt MainQuestions to user
 const displayMainQuestions = () => {
     inquirer
     .prompt(Questions.mainQuestions)
     .then((response) =>{
+        // Present the right questions when option is chosen
         switch (response.options) {
             case 'Add a Manager':
             
@@ -84,6 +91,7 @@ const displayMainQuestions = () => {
     )
 }
 
+// export
 module.exports = displayMainQuestions;
 
 

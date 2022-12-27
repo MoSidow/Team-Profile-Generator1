@@ -1,0 +1,38 @@
+/* Header style*/
+header {
+    color: blue;
+    background-color: grey;
+    text-align: center;
+    padding: 3%;
+    font-size: 30px;
+}
+
+/* card style*/
+.team-cards {
+    width: 20%;
+    height: 90%;
+    margin: 2%;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px dotted blue;
+   background-color: gray;
+}
+
+/* card style for displaying it horizontally*/
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+/* card titles */
+.card-title {
+ background-color: aqua;
+ margin-top: 2%;
+ border-radius: 15%;
+}

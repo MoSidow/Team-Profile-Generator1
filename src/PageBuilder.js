@@ -1,3 +1,4 @@
+// Preview of html file generated
 const fs = require('fs');
 
 const Manager = require('../lib/Manager');
@@ -10,7 +11,8 @@ const BuildHtmlPage = (managers, interns, engineers) => {
       if (htmlContent) {
         let internHtml = '';
         interns.forEach(intern => {
-            internHtml +=`<div class='cards'>
+            // Html for intern
+            internHtml +=`<div class='team-cards'>
             <div class='card-title'>
             <h1>Interns</h1>
             </div>
@@ -23,35 +25,38 @@ const BuildHtmlPage = (managers, interns, engineers) => {
            
         let managerHtml = '';
         managers.forEach(manager => {
-            managerHtml +=`<div class='cards'>
+            // Html for manager
+            managerHtml +=`<div class='team-cards'>
             <div class='card-title'>
             <h1>Managers</h1>
             </div>
                 <p>ID: ${manager.id}</p>
                 <p>Nmae: ${manager.name}</p>
-                <p>Email: ${manager.email}</p>
+                <p>Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
                 <p>Office Number: ${manager.officeNumber}</p>
         </div>` 
     });
 
         let engineerHtml = '';
         engineers.forEach(engineer => {
-            engineerHtml +=`<div class='cards'>
+            // Html for engineer
+            engineerHtml +=`<div class='team-cards'>
             <div class='card-title'>
             <h1>Engineers</h1>
             </div>
                 <p>ID: ${engineer.id}</p>
                 <p>Name: ${engineer.name}</p>
                 <p>Email: ${engineer.email}</p>
-                <p>GitHub: <a href="https://github.com/${engineer.github}"></a></p>
+                <p>GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
         </div>`
 
         });
-
+        // Replace placeholders with user input
         htmlContent = htmlContent.replace('<!--MANAGERS-->', managerHtml)
         htmlContent = htmlContent.replace('<!--INTERN-->', internHtml)
         htmlContent = htmlContent.replace('<!--ENGINEERS-->', engineerHtml)
 
+        // Write to html file
         fs.writeFileSync('./dist/mainTeamPage.html', htmlContent, 'utf8')
 
         console.log('Page Built')

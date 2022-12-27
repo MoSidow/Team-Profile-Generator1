@@ -1,3 +1,5 @@
+// Array of questions for users
+
 const mainQuestions = [
     {
         type: 'list',
