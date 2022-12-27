@@ -12,15 +12,15 @@ const mainQuestions = [
 const managerQuestions = [
     {
         type: 'input',
+        name: 'id',
+        message: 'What is the employee id?',
+    },
+    {
+        type: 'input',
         name: 'name',
         message: 'What is the employee name?',
     },
 
-    {
-        type: 'input',
-        name: 'id',
-        message: 'What is the employee id?',
-    },
 
     {
         type: 'input',
@@ -39,14 +39,14 @@ const managerQuestions = [
 const engineerQuestions = [
     {
         type: 'input',
-        name: 'name',
-        message: 'What is the employee name?',
+        name: 'id',
+        message: 'What is the employee id?',
     },
 
     {
         type: 'input',
-        name: 'id',
-        message: 'What is the employee id?',
+        name: 'name',
+        message: 'What is the employee name?',
     },
 
     {
@@ -65,15 +65,15 @@ const engineerQuestions = [
 const internQuestions = [
     {
         type: 'input',
+        name: 'id',
+        message: 'What is the employee id?',
+    },
+    {
+        type: 'input',
         name: 'name',
         message: 'What is the employee name?',
     },
 
-    {
-        type: 'input',
-        name: 'id',
-        message: 'What is the employee id?',
-    },
 
     {
         type: 'input',

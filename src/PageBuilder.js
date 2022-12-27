@@ -18,7 +18,7 @@ const BuildHtmlPage = (managers, interns, engineers) => {
             </div>
                 <p>ID: ${intern.id}</p>
                 <p>Name: ${intern.name}</p>
-                <p>Email: ${intern.email}</p>
+                <p>Email: Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
                 <p>School: ${intern.school}</p>
         </div>`
     });  
@@ -46,7 +46,7 @@ const BuildHtmlPage = (managers, interns, engineers) => {
             </div>
                 <p>ID: ${engineer.id}</p>
                 <p>Name: ${engineer.name}</p>
-                <p>Email: ${engineer.email}</p>
+                <p>Email: Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                 <p>GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
         </div>`
 
